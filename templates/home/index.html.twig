@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Argonautes
+{% endblock %}
+
+{% block body %}
+	<div class="container mt-3">
+		<h1>Liste des argonautes</h1>
+		<div class="row">
+			{% for argo in matelos %}
+				<div class="col-4 my-3 text-center">
+					<p>{{argo.firstname}}
+						{{argo.lastname}}</p>
+				</div>
+			{% endfor %}
+		</div>
+		<a href="{{path("add")}}" class="btn btn-primary">Ajouter un argonaute</a>
+
+	</div>
+{% endblock %}

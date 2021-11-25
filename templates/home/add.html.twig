@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Argonautes
+{% endblock %}
+
+{% block body %}
+	<h1 class="text-center mt-3">Ajouter des argonautes</h1>
+	<div class="mt-3 mx-3">
+		{{ form_start(matelos_form) }}
+		<div class="my-2">
+			{{ form_label(matelos_form.firstname, "Prénom de l'argonaute", {'label_attr': {'class': 'w-25'}}) }}
+			{{ form_widget(matelos_form.firstname, {'class': 'w-25'}) }}
+		</div>
+		{{ form_label(matelos_form.lastname, "Nom de l'argonaute", {'label_attr': {'class': 'w-25'}}) }}
+		{{ form_widget(matelos_form.lastname, {'class': 'w-25'}) }}
+		<br>
+
+		<button type="submit" class="btn btn-primary mt-3">Enregistrer</button>
+
+		{{ form_end(matelos_form) }}
+	</div>
+{% endblock %}
